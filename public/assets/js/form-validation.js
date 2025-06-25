@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const email_inputBox = document.getElementById("email_inputBox");
-    const password_InputBox = document.getElementById("password_inputBox");
-    const confirm_password_InputBox = document.getElementById("confirm_password_inputBox");
+    const password_inputBox = document.getElementById("password_inputBox");
+    const confirm_password_inputBox = document.getElementById("confirm_password_inputBox");
 
     let pswd;
 
@@ -35,24 +35,24 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const validatePassword = (value) => {
-        const passwordPattern = /^(?=,*\d)(?=.*[A-Z]).{8,}$/;
+        const passwordPattern = /^(?=.*\d)(?=.*[A-Z]).{8,}$/;
         if(passwordPattern.test(value)){
             console.log("passed");
-            password_InputBox.style.border = "1px solid rgba(0,0,0,0.12)"
+            password_inputBox.style.border = "1px solid rgba(0,0,0,0.12)"
         }else{
             console.log("failed");
-            password_InputBox.style.border = "2px solid red";
+            password_inputBox.style.border = "2px solid red";
         }
     };
 
     const validateConfirmPassword = (value) => {
-        const passwordPattern = /^(?=,*\d)(?=.*[A-Z]).{8,}$/;
+        const passwordPattern = /^(?=.*\d)(?=.*[A-Z]).{8,}$/;
         if(passwordPattern.test(value) && value === pswd){
             console.log("passed");
-            confirm_password_InputBox.style.border = "1px solid rgba(0,0,0,0.12)"
+            confirm_password_inputBox.style.border = "1px solid rgba(0,0,0,0.12)"
         }else{
             console.log("failed");
-            confirm_password_InputBox.style.border = "2px solid red";
+            confirm_password_inputBox.style.border = "2px solid red";
         }
-    }
+    };
 });
