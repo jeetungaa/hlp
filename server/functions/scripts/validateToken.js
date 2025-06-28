@@ -1,7 +1,7 @@
 const functions = require("firebase-functions");
 const admin = require("../config/admin");
 const cors = require('cors');
-const corsHandler = cors({ origin: true})
+const corsHandler = cors({ origin: true});
 
 exports.validateToken = functions.https.onRequest(async (req, res) => {
     corsHandler(req, res, async () => {

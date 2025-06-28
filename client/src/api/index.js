@@ -13,7 +13,7 @@ export const validateToken = async () => {
     const response = await api.post('/validateToken', {}, {
         headers : {
             "Authorization" : `Bearer ${token}`
-        }
-    })
+        },
+    });
     return response.data;
-}
+};
